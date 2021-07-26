@@ -9,11 +9,11 @@ import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MovieTest {
+
 
     @Test
     void avatar_test() {
@@ -26,6 +26,13 @@ class MovieTest {
                         new SequenceCondition(10),
                         new PeriodCondition(DayOfWeek.MONDAY, LocalTime.of(10, 0), LocalTime.of(11, 59)),
                         new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(20, 59))));
+
+        Screening screening = new Screening(avatar, 10, LocalDateTime.now());
+
+        Money money = avatar.calculateMovieFee(screening);
+
+        System.out.println(money);
+
     }
 
     @Test

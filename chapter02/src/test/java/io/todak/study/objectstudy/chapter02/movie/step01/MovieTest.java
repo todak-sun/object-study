@@ -1,10 +1,7 @@
 package io.todak.study.objectstudy.chapter02.movie.step01;
 
 import io.todak.study.objectstudy.chapter02.money.Money;
-import io.todak.study.objectstudy.chapter02.movie.step01.pricing.AmountDiscountPolicy;
-import io.todak.study.objectstudy.chapter02.movie.step01.pricing.PercentDiscountPolicy;
-import io.todak.study.objectstudy.chapter02.movie.step01.pricing.PeriodCondition;
-import io.todak.study.objectstudy.chapter02.movie.step01.pricing.SequenceCondition;
+import io.todak.study.objectstudy.chapter02.movie.step01.pricing.*;
 import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;
@@ -56,6 +53,14 @@ class MovieTest {
                         new SequenceCondition(2),
                         new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(13, 59))
                 ));
+    }
+
+    @Test
+    void start_wars_test() {
+        Movie startWars = new Movie("스타워즈",
+                Duration.ofMinutes(120),
+                Money.wons(10000),
+                new NoneDiscountPolicy());
     }
 
 }

@@ -1,4 +1,4 @@
-package io.todak.study.objectstudy.chapter02.movie.step01;
+package io.todak.study.objectstudy.chapter02.movie.step02;
 
 import io.todak.study.objectstudy.chapter02.money.Money;
 
@@ -26,6 +26,10 @@ public class Movie {
 
     public Money getFee() {
         return fee;
+    }
+
+    public void changeDiscountPolicy(DiscountPolicy discountPolicy) {
+        this.discountPolicy = discountPolicy;
     }
 
     public Money calculateMovieFee(Screening screening) {

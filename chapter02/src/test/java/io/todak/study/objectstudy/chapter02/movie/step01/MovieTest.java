@@ -17,6 +17,17 @@ class MovieTest {
 
     @Test
     void avatar_test() {
+
+        /**
+         * Movie 클래스는 DiscountPolicy 클래스(추상 클래스)와 연결 되어 있다.
+         * 하지만, 영화 요금을 계산하기 위해서는 추상 클래스가 아니라,
+         * AmountDiscountPolicy, PercentDiscountPolicy의 인스턴스가 필요하다.
+         *
+         * 코드 수준에서의 Movie는 이 중 어떤 것에도 의존하고 있지만,
+         * 인스턴스를 생성할 때 비로소 둘 중 어느것 하나에게 의존할 수 있게된다.
+         *
+         * => 코드의 의존성과, 실행 시점의 의존성은 서로 다르다.
+         */
         Movie avatar = new Movie("아바타",
                 Duration.ofMinutes(120),
                 Money.wons(10000),

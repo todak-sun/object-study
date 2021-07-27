@@ -20,7 +20,7 @@ public abstract class DiscountPolicy {
         /**
          * DiscountCondition의 리스트를
          * 인스턴스 변수로 가지기 때문에
-         * 하나의 할인 정책은 여러 개의 할인 조건을 포함할 수 있따.
+         * 하나의 할인 정책은 여러 개의 할인 조건을 포함할 수 있다.
          */
         this.conditions = Arrays.asList(conditions);
     }

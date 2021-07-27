@@ -12,6 +12,12 @@ public class Movie {
     private DiscountPolicy discountPolicy;
 
     public Movie(String title, Duration runningTime, Money fee, DiscountPolicy discountPolicy) {
+        /**
+         * 하나의 영화에 대해, 단 하나의 할인 정책만 설정할 수 있다.
+         * 그러나, 할인 조건의 경우에는 여러 개를 적용할 수 있다.
+         *
+         * Movie와 DiscountPolicy의 생성자는 각각 이런 제약을 강제한다.
+         */
         this.title = title;
         this.runningTime = runningTime;
         this.fee = fee;

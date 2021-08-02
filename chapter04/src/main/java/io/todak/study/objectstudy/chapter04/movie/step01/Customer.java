@@ -1,4 +1,4 @@
-package io.todak.study.objectstudy.chapter04.movie;
+package io.todak.study.objectstudy.chapter04.movie.step01;
 
 public class Customer {
     private String name;

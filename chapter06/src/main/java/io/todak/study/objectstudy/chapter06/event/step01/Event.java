@@ -8,6 +8,10 @@ public class Event {
     private LocalDateTime from;
     private Duration duration;
 
+    /***
+        깃헙에서 코드 수정해보는 테스트
+     */
+
     public Event(String subject, LocalDateTime from, Duration duration) {
         this.subject = subject;
         this.from = from;
